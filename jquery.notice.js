@@ -14,9 +14,11 @@
 		},
 
 		display: function(klass, message) {
-			return $(this).each(function() {
-				$(this).append(_getHtmlString(klass, message));
+			var $element = $(_getHtmlString(klass, message));
+			$(this).each(function() {
+				$(this).append($element);
 			});
+			return $element;
 		},
 
 		remove: function(klass, message) {
@@ -33,7 +35,7 @@
 	var _getHtmlString = function(klass, message) {
 		if (defaults[klass] !== null && typeof defaults[klass] === "function") {
 			return defaults[klass]({
-        css: klass,
+				css: klass,
 				message: message
 			})
 		}

@@ -28,12 +28,12 @@
 
           $("#sideMessages").notice({
             success: function(message){
-              return "<p class='success custom'>" + message.message + "</p>";
+              return "<p class='" + message.css + " custom'>" + message.message + "</p>";
             }
           });
 
           $('#display').click(function(){
-            _manipulateMessages("display");
+            console.log(_manipulateMessages("display").hide().slideDown("slow"));
           });
 
           $('#remove').click(function(){
