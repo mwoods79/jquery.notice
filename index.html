@@ -9,55 +9,63 @@
 
     <script src="jquery.notice.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="jquery.notice.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="jquery.notice.custom.css" type="text/css" media="screen" />
 
     <script type="text/javascript" charset="utf-8">
       $(function(){
 
           var _getClassName = function(){
-          return $('#classes option:selected').val();
+            return $('#classes option:selected').val();
           };
 
           var _getMessage = function(){
-          return $('#message').val();
+            return $('#message').val();
           };
 
           var _manipulateMessages = function(method){
-          $("#messageBox").notice(method, _getClassName(), _getMessage());
+            return $("#messageBox").notice(method, _getClassName(), _getMessage());
           };
+
+          $("#sideMessages").notice({
+            success: function(message){
+              return "<p class='success custom'>" + message.message + "</p>";
+            }
+          });
 
           $('#display').click(function(){
             _manipulateMessages("display");
-            });
+          });
 
           $('#remove').click(function(){
             _manipulateMessages("remove");
-            });
+          });
       });
-</script>
+    </script>
 
-<title>jquery.notice.js</title>
-      </head>
-      <body>
+    <title>jquery.notice.js</title>
+  </head>
+  <body>
 
-        <div id="container">
-          <select name="classes" id="classes">
-            <option value="note">note</option>
-            <option value="success">success</option>
-            <option value="notice">notice</option>
-            <option value="warning">warning</option>
-            <option value="error">error</option>
-          </select>
-          <input type="text" id="message" name="message" value="" />
-          <button id="display">Display Message</button>
-          <button id="remove">Remove Message</button>
-          <div id="messageBox">
-            <p class="note">This is a note</p> 
-            <p class="success">This is a success notification</p>
-            <p class="notice">This is a notice</p>
-            <p class="error">And this is an error notification</p>
-            <p class="warning">This is a warning notification</p>
-          </div>
-        </div>
+    <div id="container">
+      <select name="classes" id="classes">
+        <option value="note">note</option>
+        <option value="success">success</option>
+        <option value="notice">notice</option>
+        <option value="warning">warning</option>
+        <option value="error">error</option>
+      </select>
+      <input type="text" id="message" name="message" value="" />
+      <button id="display">Display Message</button>
+      <button id="remove">Remove Message</button>
+      <div id="messageBox">
+        <p class="note">This is a note</p>
+        <p class="success">This is a success notification</p>
+        <p class="notice">This is a notice</p>
+        <p class="error">And this is an error notification</p>
+        <p class="warning">This is a warning notification</p>
+      </div>
+      <div id="sideMessages"></div>
+    </div>
 
-      </body>
-    </html>
+  </body>
+</html>
