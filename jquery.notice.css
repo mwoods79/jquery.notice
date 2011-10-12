@@ -1,0 +1,53 @@
+.note
+{
+  background: #F7F7F7;
+  border-color: #C1C1C1;
+}
+
+.success
+{
+  background: #DEE3AB;
+  border-color: #A3C159;
+  color: #5E6F33;
+}
+
+.notice
+{
+  background: #BFE4F9;
+  border-color: #68A2CF;
+  color: #2E6093;
+}
+
+.warning
+{
+  background: #FDEBAE;
+  border-color: #E6C555;
+  color: #9E660D;
+}
+
+.error {
+  background: #FCC;
+  border-color: #F99;
+  color: #C31B00;
+}
+
+.note, .success, .notice, .warning, .error
+{
+  border: 1px solid;
+  padding: 5px 7px;
+  text-align: center;
+}
+
+.note, .success, .notice, .warning, .error
+{
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.note, .success, .notice, .warning, .error
+{
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
