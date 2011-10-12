@@ -18,3 +18,5 @@ types
     notice
     error
     warning
+
+For more information on how to author a jquery plugin please visit the jquery [documentation](http://docs.jquery.com/Plugins/Authoring).
