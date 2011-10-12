@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" id="theme" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="demo.css" type="text/css" media="screen" />
+
+    <script src="jquery.notice.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="jquery.notice.css" type="text/css" media="screen" />
+
+    <title>jquery.notice.js</title>
+  </head>
+  <body>
+
+    <div id="container">
+      <select name="classes" id="classes">
+        <option value="note">note</option>
+        <option value="sucess">sucess</option>
+        <option value="notice">notice</option>
+        <option value="warning">warning</option>
+        <option value="error">error</option>
+      </select>
+      <input type="text" id="message" name="message" value="" />
+      <button id="display">Display Message</button>
+      <button id="submit">Display Message</button>
+      <div id="messageBox">
+        <p class="note">This is a note</p> 
+        <p class="success">This is a success notification</p>
+        <p class="notice">This is a notice</p>
+        <p class="error">And this is an error notification</p>
+        <p class="warning">This is a warning notification</p>
+      </div>
+    </div>
+
+  </body>
+</html>
