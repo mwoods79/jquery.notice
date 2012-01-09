@@ -11,6 +11,7 @@ methods =
   init: (options) ->
     $.extend defaults, options if options
 
+  # This is not in sync with javascript version
   display: (klass, message) ->
     $element = ($ _getHtmlString klass, message)
     ($ this).each () ->
