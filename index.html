@@ -14,18 +14,23 @@
     <script type="text/javascript" charset="utf-8">
       $(function(){
 
+          // Returns the selected option from the dropdown
           var _getClassName = function(){
             return $('#classes option:selected').val();
           };
 
+          // Returns the message entered into the input
           var _getMessage = function(){
             return $('#message').val();
           };
 
+          // Renders the notice and returns the element
           var _manipulateMessages = function(method){
             return $("#messageBox").notice(method, _getClassName(), _getMessage());
           };
 
+          // Over ride success messate with a template.
+          // This functionality would make it easy to use _.templates or Handlebars.js
           $("#sideMessages").notice({
             success: function(message){
               return "<p class='" + message.css + " custom'>" + message.message + "</p>";
@@ -33,7 +38,7 @@
           });
 
           $('#display').click(function(){
-            console.log(_manipulateMessages("display").hide().slideDown("slow"));
+            _manipulateMessages("display");
           });
 
           $('#remove').click(function(){
